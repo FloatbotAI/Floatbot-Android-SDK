@@ -70,9 +70,14 @@ FloatbotUtils.setNoInternetConnectionView(this,R.layout.nointernet);
 
 **If you have enabled mic in chatbot. You need to handle Mircophone permission in activity before loading fragment**
  
-**Currently as of now attachment item is not supported in android floatbot sdk **
+**Currently as of now attachment item is not supported in android floatbot sdk**
 
 To Delete user/Clear/Logout from  Floatbot app
 ~~~java
 FloatbotUtils.clearUserData(this);
 ~~~
+
+
+
+
+Please let us know if you encounter any problems at **support@floatbot.ai**
