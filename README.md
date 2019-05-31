@@ -1,3 +1,8 @@
+
+
+# Android-SDK
+
+
 To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-1.0.aar) 
 
 Sdk has only 1 fragment which can be placed any activity
@@ -72,6 +77,3 @@ To Delete user/Clear/Logout from  Floatbot app
 ~~~java
 FloatbotUtils.clearUserData(this);
 ~~~
-
-
-# Android-SDK
