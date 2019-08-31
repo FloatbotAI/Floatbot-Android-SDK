@@ -1,4 +1,4 @@
-To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-1.2.aar)
+To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-1.3.aar)
 
 Sdk has only 1 fragment which can be placed any activity
 
