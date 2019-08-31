@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
+import app.floatbot.FloatbotAttributes;
 import app.floatbot.FloatbotFragment;
 import app.floatbot.FloatbotUtils;
 
@@ -34,6 +35,15 @@ public class SampleActivity extends AppCompatActivity implements FloatbotFragmen
         //bundle.putString("push_token",<FCM TOKEN>);
         //bundle.putString("data",<AES-CBC-256 Encrypted Json String>);
 
+        //To set attributes directly from SDK
+        FloatbotAttributes attributes = new FloatbotAttributes();
+        try {
+            attributes.addAttributes("name","user-name");
+            bundle.putSerializable("attributes",attributes);
+        } catch (Exception e) {
+
+        }
+        
         flb.setArguments(bundle);
         transaction.replace(R.id.addView,flb);
         transaction.commit();

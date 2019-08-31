@@ -44,6 +44,20 @@ Encryption method - 'AES CBC 256'
 ~~~java
 bundle.putString("data",AES-CBC-256 Encrypted Json String);
 ~~~
+
+You can set attributes by encrypting them in json string (data bundle)
+Or
+To set attributes directly from SDK
+~~~java
+FloatbotAttributes attributes = new FloatbotAttributes();
+try {
+    attributes.addAttributes("name","user-name");
+    bundle.putSerializable("attributes",attributes);
+} catch (Exception e) {
+
+}
+~~~
+
 To register for push notification, you need to pass gcm/fcm token in bundle as below
 ~~~java
 bundle.putString("push_token","GCM/FCM TOKEN");
