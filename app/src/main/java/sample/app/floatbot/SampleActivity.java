@@ -39,7 +39,7 @@ public class SampleActivity extends AppCompatActivity implements FloatbotFragmen
         FloatbotAttributes attributes = new FloatbotAttributes();
         try {
             attributes.addAttributes("name","user-name");
-            bundle.putSerializable("attributes",attributes);
+            bundle.putString("attributes",attributes.value());
         } catch (Exception e) {
 
         }
@@ -64,7 +64,7 @@ public class SampleActivity extends AppCompatActivity implements FloatbotFragmen
         //FloatbotUtils.clearUserData(this);
 
         /* To update token in floatbot, call below function with new push token */
-        //FloatbotUtils.updatePushToken("<FCM TOKEN>");
+        //FloatbotUtils. ("<FCM TOKEN>");
 
     }
 }
