@@ -52,7 +52,7 @@ To set attributes directly from SDK
 FloatbotAttributes attributes = new FloatbotAttributes();
 try {
     attributes.addAttributes("name","user-name");
-    bundle.putSerializable("attributes",attributes);
+    bundle.putString("attributes",attributes.value());
 } catch (Exception e) {
 
 }
