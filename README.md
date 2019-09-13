@@ -1,4 +1,10 @@
-To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.0.aar)
+To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.1.aar)
+
+You need to handle Runtime permission for
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> //for voice input from user
+<uses-permission android:name="android.permission.RECORD_AUDIO" />  // for voice input from user  
+<uses-permission android:name="android.permission.READ_PHONE_STATE" /> // optional , for device's imei number
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 Sdk has only 1 fragment which can be placed any activity
 

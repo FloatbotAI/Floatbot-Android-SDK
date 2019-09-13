@@ -1,1 +1,1 @@
-include ':app', ':floatbotapp-2.0'
+include ':app', ':floatbotapp-2.1'
