@@ -1,10 +1,6 @@
-To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.1.aar)
+To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.2.aar)
 
 You need to handle Runtime permission for
-<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> //for voice input from user
-<uses-permission android:name="android.permission.RECORD_AUDIO" />  // for voice input from user  
-<uses-permission android:name="android.permission.READ_PHONE_STATE" /> // optional , for device's imei number
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 Sdk has only 1 fragment which can be placed any activity
 
@@ -98,6 +94,16 @@ FloatbotUtils.clearUserData(this);
 ~~~
 
 
+From Sdk version 2.2 You can handle callback url in android app
+Just implement onCallback() method from OnFloatbotInteractionListener interface in your main activity
+
+~~~java
+ @Override
+    public void onCallback(Uri uri) {
+        Log.e("callback",uri.toString());
+        //finish();
+    }
+~~~
 
 
 Please let us know if you encounter any problems at **support@floatbot.ai**

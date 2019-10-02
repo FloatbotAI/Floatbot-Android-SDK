@@ -1,8 +1,10 @@
 package sample.app.floatbot;
 
+import android.net.Uri;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.FrameLayout;
 
 import app.floatbot.FloatbotAttributes;
@@ -17,6 +19,13 @@ public class SampleActivity extends AppCompatActivity implements FloatbotFragmen
     @Override
     public void onChatWindowClosed() {
         finish();
+    }
+
+
+    @Override
+    public void onCallback(Uri uri) {
+        Log.e("callback",uri.toString());
+        //finish();
     }
 
     @Override
