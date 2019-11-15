@@ -35,23 +35,26 @@ public class SampleActivity extends AppCompatActivity implements FloatbotFragmen
 
         addView = (FrameLayout) findViewById(R.id.addView);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        flb =  new FloatbotFragment(this);
-
+        flb =  new FloatbotFragment();
         Bundle bundle = new Bundle();
-        bundle.putString("bot_id","5cc00545e6293668180a5d12");
-        bundle.putString("key","U9vuk4FWthYO8ygE25nRqApbL1TSHx");
+        bundle.putString("bot_id","5dad7272e629363ee04ecda2");
+        bundle.putString("key","lwf29rMeVOuYFCHDEztZNqA8aKo");
         bundle.putBoolean("showHeader",true);
+
+        //Will create new Session of user everytime
+        bundle.putBoolean("create_new_session",true);
+
         //bundle.putString("push_token",<FCM TOKEN>);
         //bundle.putString("data",<AES-CBC-256 Encrypted Json String>);
 
         //To set attributes directly from SDK
-        FloatbotAttributes attributes = new FloatbotAttributes();
+        /* FloatbotAttributes attributes = new FloatbotAttributes();
         try {
             attributes.addAttributes("name","user-name");
             bundle.putString("attributes",attributes.value());
         } catch (Exception e) {
 
-        }
+        }*/
         
         flb.setArguments(bundle);
         transaction.replace(R.id.addView,flb);

@@ -1,4 +1,4 @@
-To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.2.aar)
+To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.3.aar)
 
 You need to handle Runtime permission for
 
@@ -105,5 +105,10 @@ Just implement onCallback() method from OnFloatbotInteractionListener interface 
     }
 ~~~
 
+From SDK version 2.3 , you can pass one more parameter in bundle
+It will create new session everytime when value is set to true (Default value is false)
+~~~java
+    bundle.putBoolean("create_new_session",true);
+~~~
 
 Please let us know if you encounter any problems at **support@floatbot.ai**
