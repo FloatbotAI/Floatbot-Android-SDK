@@ -2,7 +2,7 @@ To integrate floatbot sdk in android app first download floatbot aar file from [
 
 You need to handle Runtime permission for
 
-Sdk has only 1 fragment which can be placed any activity
+Sdk has only 1 fragment which can be placed in any activity
 
 Your Activity must implement OnFloatbotInteractionListener interface and override its method onChatWindowClosed
 
@@ -30,9 +30,14 @@ bundle.putString("key","BOT-TOKEN");
 ~~~
 
 To get your key and bot_id,
-Login to https://dev.floatbot.ai/console
-Click on Bot API Keys under Developers Section
-Select Bot ID and Secret Key against your Bot Name and Key Name "Android security token"
+
+Login to https://floatbot.ai/console <h6>Note: Please change URL accordingly, if your setup is on-premise or on private cloud,
+Example: **https://domain/console** 
+</h6>
+
+Once you are logged in please click on **Bot API Keys** under **Developers** Section
+
+Select **Bot ID** and **Secret Key** against your Bot Name and Key Name **Android security token**
  
 To hide header from chat window, simply pass showHeader value as false. By default value will be true
 
