@@ -1,4 +1,4 @@
-To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-2.3.aar)
+To integrate floatbot sdk in android app first download floatbot aar file from [here](https://floatbot.ai/android-sdk/floatbotapp-3.2.aar)
 
 You need to handle Runtime permission for
 
@@ -22,15 +22,17 @@ We need to pass below paramaters in fragment
 
 ~~~java
 
- FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         flb =  new FloatbotFragment(this);
 Bundle bundle = new Bundle();
 bundle.putString("bot_id","BOT-ID");
 bundle.putString("key","BOT-TOKEN");
 ~~~
- 
- BOT-ID : Your floatbot bot id
- BOT-TOKEN : You will get bot token from Floatbot Dashboard -> Settings -> Android Tab
+
+To get your key and bot_id,
+Login to https://dev.floatbot.ai/console
+Click on Bot API Keys under Developers Section
+Select Bot ID and Secret Key against your Bot Name and Key Name "Android security token"
  
 To hide header from chat window, simply pass showHeader value as false. By default value will be true
 
@@ -111,4 +113,11 @@ It will create new session everytime when value is set to true (Default value is
     bundle.putBoolean("create_new_session",true);
 ~~~
 
-Please let us know if you encounter any problems at **support@floatbot.ai**
+From SDK version 3.2 , you can set/change chatbot domain in SDK
+It is used to point to that domain [use this settings for on-premise or private cloud setup or public cloud with different region]
+(Default value is https://floatbot.ai)
+~~~java
+    bundle.putBoolean("create_new_session",true);
+~~~
+
+Please let us know if you encounter any problems at **connect@floatbot.ai**
