@@ -122,7 +122,7 @@ From SDK version 3.2 , you can set/change chatbot domain in SDK
 It is used to point to that domain [use this settings for on-premise or private cloud setup or public cloud with different region]
 (Default value is https://floatbot.ai)
 ~~~java
-    bundle.putBoolean("create_new_session",true);
+    bundle.putBoolean("domain","https://floatbot.ai");
 ~~~
 
 Please let us know if you encounter any problems at **connect@floatbot.ai**
